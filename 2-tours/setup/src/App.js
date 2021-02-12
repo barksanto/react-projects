@@ -21,13 +21,10 @@ function App() {
       setLoading(false);
       console.log(error);
     }
-    
-  
   }
 
   useEffect(() => {
     fetchTours();
-    
   }, []);
 
   if (loading) {
@@ -35,7 +32,7 @@ function App() {
       <Loading />
     </main>
   }
-  return <main><Tours /></main>
+  return <main><Tours tours={tours}/></main>
 }
 
 export default App
