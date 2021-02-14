@@ -41,6 +41,7 @@ function App() {
     return <main>
       <div className="title">
         <h2>No Tours Left</h2>
+        <button onClick={() => fetchTours()}>Fetch Tours</button>
       </div>
     </main>
   }
