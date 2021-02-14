@@ -3,9 +3,15 @@ import Review from './Review';
 import { FaGithubSquare } from 'react-icons/fa';
 
 function App() {
-  return <h2>reviews project setup
-    <FaGithubSquare className="icon" />
-  </h2>;
+  return <main>
+    <div className="container">
+      <div className="title">
+        <h2>Our Reviews</h2>
+        <div className="underline"></div>
+      </div>
+    </div>
+    {/* <FaGithubSquare className="icon" /> */}
+  </main>;
 }
 
 export default App;
