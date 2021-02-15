@@ -31,10 +31,15 @@ const Review = () => {
   }
 
   const randomPerson = () => {
-    setIndex((index) => {
-      let newIndex = Math.floor(Math.random() * people.length);
-      return checkNumber(newIndex);
-    })
+    // setIndex((index) => {
+    //   let newIndex = Math.floor(Math.random() * people.length);
+    //   return checkNumber(newIndex);
+    // })
+    let newIndex = Math.floor(Math.random() * people.length);
+    if (newIndex === index) {
+      newIndex = index + 1
+    }
+    setIndex(checkNumber(newIndex));
   }
 
 
