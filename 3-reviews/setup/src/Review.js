@@ -7,8 +7,11 @@ const Review = () => {
   const { name, job, image, text } = people[index];
 
   return <article className="review">
-    <div>
-      <img src={image} alt={name} className="person-img"/>
+    <div className="img-container">
+      <img src={image} alt={name} className="person-img" />
+      <span className="quote-icon">
+        <FaQuoteRight />
+      </span>
     </div>
   </article>;
 };
