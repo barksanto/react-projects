@@ -10,7 +10,8 @@ const Question = ({ title, info }) => {
       <h4>{title}</h4>
       <button className="btn" onClick={() => setReadMore(!readMore)}>{readMore ? '👎🏾' : '👍🏾'}</button>
     </header>
-    <p>{readMore ? info : `${info.substring(0, 75)}...`}</p>
+    {/* <p>{readMore ? info : `${info.substring(0, 75)}...`}</p> */}
+    <p>{readMore ? info : ''}</p>
   </article >)
 };
 
