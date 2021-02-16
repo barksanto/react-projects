@@ -22,7 +22,7 @@ const Review = () => {
       return checkNumber(newIndex);
     })
   }
-
+// comment for Justin
   const prevPerson = () => {
     setIndex((index) => {
       let newIndex = index - 1;
