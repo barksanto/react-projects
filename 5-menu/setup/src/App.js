@@ -3,17 +3,17 @@ import Menu from './Menu';
 import Categories from './Categories';
 import items from './data';
 
-const allCategories = ['all',...new Set( items.map((item) => item.category))];
-console.log(allCategories);
+const allCategories = ['all', ...new Set(items.map((item) => item.category))];
+// console.log(allCategories);
 
 function App() {
   // items is the array coming from data
   const [menuItems, setMenuItems] = useState(items);
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState(allCategories);
 
   // always filter from original list instead of the modified list
   const filterItems = (category) => {
-    if(category === "all"){
+    if (category === "all") {
       setMenuItems(items);
       return
     }
@@ -21,13 +21,14 @@ function App() {
     setMenuItems(newItems);
   }
 
+
   return (
     <main>
       <section className="menu">
         <div className="title">
           <h2>our menu</h2>
           <div className="underline"></div>
-          <Categories filterItems={filterItems} />
+          <Categories categories={categories} filterItems={filterItems} />
           {/* pass in menuItems state value as a prop */}
           <Menu items={menuItems} />
         </div>
