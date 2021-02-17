@@ -27,6 +27,10 @@ function App() {
       </section>)
   }
 
+  // no longer an empty array since we fetched the jobs
+  const { company, dates, duties, title } = jobs;
+
+
   return <h2>jobs</h2>
 }
 
