@@ -4,7 +4,12 @@ import Categories from './Categories';
 import items from './data';
 
 function App() {
-  return <h2>menu project setup</h2>;
+const [menuItems, setMenuItems] = useState(item);
+
+
+  return (
+  <h2>menu project setup</h2>
+  )
 }
 
 export default App;
