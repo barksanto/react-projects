@@ -16,7 +16,8 @@ function App() {
           <h2>our menu</h2>
           <div className="underline"></div>
           <Categories />
-          <Menu />
+          {/* pass in menuItems state value as a prop */}
+          <Menu items={menuItems} />
         </div>
       </section>
     </main>
